@@ -27,6 +27,24 @@ def help(update, context):
 
 def kafedra(update, context):
     update.callback_query.message.reply_text('Прекрасная кафедра')
+    
+def mozhluv(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def umovy(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def proect(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def osvita(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def prahe(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
+
+def practik(update, context):
+    update.callback_query.message.reply_text("Прекрасная кафедра")
 
 
 def error(update, context):
@@ -42,6 +60,14 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
     dp.add_handler(CallbackQueryHandler(kafedra, pattern = "kafedra"))
+    dp.add_handler(CallbackQueryHandler(mozhluv,pattern = "mozhluv"))
+    dp.add_handler(CallbackQueryHandler(umovy,pattern = "umovy"))
+    dp.add_handler(CallbackQueryHandler(proect,pattern = "proect"))
+    dp.add_handler(CallbackQueryHandler(osvita,pattern = "osvita"))
+    dp.add_handler(CallbackQueryHandler(prahe,pattern = "prahe"))
+    dp.add_handler(CallbackQueryHandler(practik,pattern = "practik"))
+    
+
 
     dp.add_error_handler(error)
 
